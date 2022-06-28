@@ -1,61 +1,3 @@
-n/env python
-# coding: utf-8
-Project : Rain in Australia
-# ## Description:
-# __Context:__
-# Predict next-day rain by training classification models on the target variable RainTomorrow.
-# 
-# __Content:__
-# This dataset contains about 10 years of daily weather observations from many locations across Australia.
-# 
-# __Business Goal:__
-# 
-# Main objective of the analysis is to focus on prediction of value of the __RainTomorrow__  .
-# 
-# __RainTomorrow__ is the target variable to predict. It means -- did it rain the next day, Yes or No? This column is Yes if the rain for that day was 1mm or more.
-# 
-# Source & Acknowledgements
-# Observations were drawn from numerous weather stations. The daily observations are available from [link](http://www.bom.gov.au/climate/data).
-# An example of latest weather observations in Canberra:[link](http://www.bom.gov.au/climate/dwo/IDCJDW2801.latest.shtml)
-# 
-# Definitions adapted from http://www.bom.gov.au/climate/dwo/IDCJDW0000.shtml
-# Data source:[source](http://www.bom.gov.au/climate/dwo/ and http://www.bom.gov.au/climate/data).
-# 
-# Copyright Commonwealth of Australia 2010, Bureau of Meteorology.
-
-# ## Introduction
-# 
-# 
-# 
-# 
-# ![image.png](attachment:image.png)
-# 
-# 
-# 
-# * We will be using the wetherAus data from kaggle.
-# 
-# * We have 23 columns including targer variable .
-# 
-# * This a problem of clasifiaiton binary .
-# 
-# * We will use a diferent model of clasification (logistic reg,Knn,svm,boosting) and compar them .
-# 
-# * we will use oversampling technique .
-#  
-# 
-# 
-
-# # Exploratory Data Analysis
-# 
-# * Import library and the csv file and examine its contents.
-# * Output summary statistics and check variable data types
-# * Check missing values 
-# * check the correlation between variables one one hand and with the target 
-
-# ### Library
-
-# In[3]:
-
 
 import pandas as pd
 import numpy as np
@@ -65,24 +7,12 @@ import seaborn as sns
 
 ########
 
-from sklearn.model_selection import StratifiedShuffleSplit ,GridSearchCV
-from sklearn.linear_model import LogisticRegression,LogisticRegressionCV
-from sklearn.metrics import confusion_matrix, accuracy_score, classification_report, precision_score, f1_score, roc_auc_score
-from sklearn.kernel_approximation import Nystroem
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.svm import SVC
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.tree import DecisionTreeClassifier
+
 from sklearn.preprocessing import LabelBinarizer, LabelEncoder
 
 import warnings
 warnings.filterwarnings('ignore')
 
-
-# #### Preparing data
-
-# In[2]:
 
 
 data= pd.read_csv('weatherAUS.csv')
