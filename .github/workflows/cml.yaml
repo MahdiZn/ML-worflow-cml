@@ -18,10 +18,10 @@ jobs:
         name: run preprocess
         run: |   
           python process.py
-      -
-        name: Train model
-        run: |     
-          python train_logisticR.py
+      #-
+        #name: Train model
+        #run: |     
+         # python train_logisticR.py
           
       - name: Write CML report
       
