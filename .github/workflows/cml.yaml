@@ -1,4 +1,4 @@
-name: farmers
+name: RAIN
 on: [push]
 jobs:
   run:
