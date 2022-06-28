@@ -23,8 +23,5 @@ jobs:
           python train_logisticR.py
           echo "## Model Metrics" > report.md
           cat metrics.json>>report.md
-          
-          # Add figure to the report
-          echo "## Validating results by region" >> report.md
-          cml-publish CM_ALL_LR.png --md >> report.md
+         
           cml-send-comment report.md
