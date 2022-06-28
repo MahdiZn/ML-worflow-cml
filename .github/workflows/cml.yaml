@@ -27,8 +27,9 @@ jobs:
       
         run: |
           # Post reports as comments in GitHub PRs
-          echo "## Model Metrics" > report.md
-          cat metrics.json>>report.md
+           # Add figure to the report
+          echo "## Validating results " 
+          cml-publish CM_ALL_LR.png --md >> report.md
           cml send-comment report.md    
          
         
