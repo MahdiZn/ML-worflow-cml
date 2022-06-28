@@ -11,8 +11,8 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pip install -r requirements.txt
-          python process.py
-          python train_logisticR.py
+          python3 process.py
+          python3 train_logisticR.py
            echo "## Model Metrics" > report.md
           cat metrics.json>>report.md
           
