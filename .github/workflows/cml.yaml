@@ -26,5 +26,5 @@ jobs:
         run: |
           # Post reports as comments in GitHub PRs
           echo "metrics"
-          cat mericas.txt >> report.md
+          cat metricas.txt >> report.md
           cml send-comment report.md
